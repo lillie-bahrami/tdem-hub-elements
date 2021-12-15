@@ -1,0 +1,15 @@
+/* ----- Color variables -----  */
+
+:root {
+
+    --red:          #C4113C;
+    --orange:       #FCAF17;
+    --yellow:       #FFDD14;
+    --green:        #3BA649;
+    --dark-green:   #216C2A;
+    --blue:         #2B6DA6;
+    --dark-blue:    #06205C;
+
+    --light:        #F7F7F7; /*Row backgrounds should alternate between "light" and white*/
+    --gray:         #5B5B5B;
+}

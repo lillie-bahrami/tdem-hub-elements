@@ -1,0 +1,56 @@
+/* ----- Typography -----  */
+  
+/* Headings: Titillium Web */
+h1 {
+    font-weight:          normal;
+    color:                #fff;
+}
+
+h2 {
+    font-weight:          normal;
+    color:                var(--dark-blue);
+}
+
+h3 {
+    font-weight:          normal;
+    color:                var(--dark-blue);
+}
+
+h4 {
+    font-weight:          bold;
+    color:                var(--dark-blue);
+}
+
+/* Body Text: Open Sans */
+p {
+    font-size:            16px;
+    font-weight:          normal;
+    color:                var(--gray);
+}
+
+/* ----- Media queries based on Bootstrap breakpoints -----  */
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    h1 {font-size:  32px;}
+    h2 {font-size:  26px;}
+    h3 {font-size:  22px;}
+    h4 {font-size:  18px;}
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    h1 {font-size:  40px;}
+    h2 {font-size:  32px;}
+    h3 {font-size:  24px;}
+    h4 {font-size:  18px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    h1 {font-size:  48px;}
+    h2 {font-size:  36px;}
+    h3 {font-size:  28px;}
+    h4 {font-size:  18px;}
+ }

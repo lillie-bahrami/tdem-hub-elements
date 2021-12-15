@@ -1,0 +1,54 @@
+/*
+    var(--element-color) contains the dominant color for the circle-icon element,
+    and should be set in the inline CSS for the element with class "circle" applied
+*/ 
+    
+/* ----- Default styles -----  */
+
+.circle {
+    background-color: #ffffff; 
+    border-color: var(--element-color);
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 2%;
+}
+
+.circle .icon {
+    fill: var(--dark-blue);
+    fill: var(--element-color);
+    width: 70%;
+    height: auto;
+    margin: 15% 0% 0% 15%;
+}
+
+/* ----- Sizes -----  */
+
+/* For use in header rows */
+.circle.large {
+    width: 200px; height: 200px;
+}
+
+/* For use in DRC homepage nav */
+.circle.medium {
+    width: 125px; height: 125px;
+}
+
+/* For use in DRC header nav */
+.circle.small {
+    width: 75px; height: 75px;
+}
+
+/* ----- Special cases -----  */
+
+/* "Active" represents current page in the nav */
+.circle.active, a .circle:hover {
+    background-color: var(--element-color);
+}
+
+.circle.active .icon, a .circle:hover .icon {
+    fill: #fff;
+}
+
+.cls-1{fill:none;}      /*necessary for SVGs*/
