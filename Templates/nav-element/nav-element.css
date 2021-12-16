@@ -1,0 +1,22 @@
+.nav-element {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 125px; /*should be passed in?*/
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .nav-element {
+      flex-flow: row nowrap;
+      width: 100%;
+      padding: 2rem 0rem;
+    }
+  
+    .nav-element:nth-of-type(2n){
+      background-color: var(--light);
+    }
+  }

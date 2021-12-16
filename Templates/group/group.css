@@ -1,0 +1,18 @@
+.group {
+    display:flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+    align-items: center;
+    gap: 2%;
+  }
+
+/* ----- Media queries based on Bootstrap breakpoints -----  */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .group {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}

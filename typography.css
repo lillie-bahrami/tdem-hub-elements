@@ -4,6 +4,7 @@
 h1 {
     font-weight:          normal;
     color:                #fff;
+    width:                300px;
 }
 
 h2 {
@@ -28,9 +29,36 @@ p {
     color:                var(--gray);
 }
 
+.nav-number {
+    font-weight: bold;
+    font-family: 'Titillium Web';
+    font-size: 36px;
+    color: var(--dark-blue);
+}
+
+.row-text {
+    text-align: left;
+}
+
+.col-text {
+    text-align: center;
+    width: 7rem;
+}
+
 /* ----- Media queries based on Bootstrap breakpoints -----  */
 
 /* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .row-text {
+    text-align: center;
+  }
+
+  .col-text {
+    text-align: left;
+    width: 200px;
+  }
+}
+
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     h1 {font-size:  32px;}

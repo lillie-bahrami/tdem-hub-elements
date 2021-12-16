@@ -13,6 +13,7 @@
     border-radius: 50%;
     vertical-align: middle;
     padding: 2%;
+    margin: 1rem;
 }
 
 .circle .icon {
@@ -27,17 +28,18 @@
 
 /* For use in header rows */
 .circle.large {
-    width: 200px; height: 200px;
+    width: 15rem; height: 15rem;
 }
 
 /* For use in DRC homepage nav */
 .circle.medium {
-    width: 125px; height: 125px;
+    width: 10rem; height: 10rem;
+
 }
 
 /* For use in DRC header nav */
 .circle.small {
-    width: 75px; height: 75px;
+    width: 5rem; height: 5rem;
 }
 
 /* ----- Special cases -----  */
@@ -52,3 +54,20 @@
 }
 
 .cls-1{fill:none;}      /*necessary for SVGs*/
+
+/* ----- Media queries based on Bootstrap breakpoints -----  */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .circle.large {
+        width: 100px; height: 100px;
+    }
+
+    .circle.medium {
+        width: 75px; height: 75px;
+    }
+
+    .circle.small {
+        width: 50px; height: 50px;
+    }
+}
