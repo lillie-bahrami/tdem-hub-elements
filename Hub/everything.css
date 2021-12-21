@@ -1,0 +1,256 @@
+/* ---------------------
+Color variables
+--------------------- */
+
+:root {
+
+    --red       : #C4113C;
+    --orange    : #FCAF17;
+    --yellow    : #FFDD14;
+    --green     : #3BA649;
+    --dark-green: #216C2A;
+    --blue      : #2B6DA6;
+    --dark-blue : #06205C;
+    
+    --light: #F7F7F7;  /*Row backgrounds should alternate between "light" and white*/
+    --gray : #5B5B5B;
+}
+
+/* ---------------------
+Typography
+--------------------- */
+    
+/* Headings: Titillium Web */
+h1 {
+    color: #fff;
+    width: 300px;
+}
+
+h2 {
+    color: var(--dark-blue);
+}
+
+h3 {
+    color: var(--dark-blue);
+}
+
+h4 {
+    font-weight: bold;
+    color      : var(--dark-blue);
+}
+
+/* Body Text: Open Sans */
+p {
+    font-size: 16px;
+    color    : var(--gray);
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+  }
+
+/* ----- Special cases -----  */
+
+.nav-number {
+    font-weight: bold;
+    font-family: 'Titillium Web';
+    font-size  : 36px;
+    color      : var(--dark-blue);
+}
+
+.row-text {
+    text-align: left;
+}
+
+.col-text {
+    text-align: center;
+}
+
+.header-nav-full .nav-element .col-text {
+    font-size  : 12px;
+    font-weight: bold;
+}
+
+/* ---------------------
+    Icons in circles
+--------------------- */
+/*
+    var(--element-color) contains the dominant color for the circle-icon element,
+    and should be set in the inline CSS for the element with class "circle" applied
+*/
+
+/* ----- Default styles -----  */
+
+.circle {
+    background-color: #ffffff;
+    border-color    : var(--element-color);
+    border-width    : 5px;
+    border-style    : solid;
+    border-radius   : 50%;
+    vertical-align  : middle;
+    padding         : 2%;
+    margin          : 1rem;
+}
+  
+.circle .icon {
+fill  : var(--dark-blue);
+fill  : var(--element-color);
+width : 70%;
+height: auto;
+margin: 15% 0% 0% 15%;
+}
+
+/* ----- Sizes -----  */
+
+/* For use in header rows */
+.circle.large {width : 15rem; height: 15rem;}
+
+/* For use in DRC homepage nav */
+.circle.medium {width : 10rem; height: 10rem;}
+
+/* For use in DRC header nav */
+.circle.small {width : 5rem; height: 5rem;}
+
+/* ----- Special cases -----  */
+a .circle:hover {
+cursor: pointer;
+}
+
+/* "Active" represents current page in the nav */
+.circle.active,
+a .circle:hover {
+background-color: var(--element-color);
+}
+
+.circle.active .icon,
+a .circle:hover .icon {
+filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(311deg)
+    brightness(103%) contrast(100%);
+}
+
+.cls-1 {fill: none;} /*necessary for SVGs*/
+
+/* ---------------------
+Nav elements
+--------------------- */
+
+/* Titles, other info attached to circle icons in navs */
+.nav-element {
+    display        : flex;
+    flex-flow      : column nowrap;
+    align-self     : flex-start;
+    align-items    : center;
+    justify-content: space-evenly;
+    gap            : 1rem;
+    width          : 125px;          
+}
+
+/* ---------------------
+    Groups (navs or header rows)
+    --------------------- */
+
+.group {
+    display        : flex;
+    width          : 100%;
+    flex-flow      : row nowrap;
+    justify-content: space-around;
+    align-items    : center;
+    gap            : 2%;
+}
+
+.header-row {
+    justify-content: center;
+}
+    
+.group.header-nav-full {
+    justify-content: center;
+}
+
+/* ---------------------
+    Media queries based on Bootstrap breakpoints
+    --------------------- */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .row-text {
+    text-align: center;
+    }
+
+    .col-text {
+    width: 150px;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    h1 {font-size:  32px;}
+    h2 {font-size:  26px;}
+    h3 {font-size:  22px;}
+    h4 {font-size:  18px;}
+
+    .col-text {
+        text-align: left;
+        width     : 300px;
+    }
+
+    /* Nav elements turn into wide buttons */
+    .nav-element {
+        flex-flow: row nowrap;
+        width    : 100%;
+    }
+
+    .nav-element:nth-of-type(2n) {
+        background-color: var(--light);
+    }
+
+    .nav-element:nth-of-type(2n-1) {
+        background-color: #fff;
+    }
+
+    .group {
+        flex-flow: column nowrap;
+        width    : 100%;
+    }
+
+    .group.header-nav-responsive .nav-element {
+        padding: 0.5rem 0rem;
+    }
+
+    .header-nav-full {
+        display: none;
+    }
+
+    .header-nav-responsive {
+        display: contents;
+    }
+    
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    h1 {font-size:  40px;}
+    h2 {font-size:  32px;}
+    h3 {font-size:  24px;}
+    h4 {font-size:  18px;}
+    .circle.medium {width : 10rem; height: 10rem;}
+}
+
+/* Medium devices (tablets, less than 992px) and larger */
+@media (min-width: 768px) {
+    .header-nav-responsive {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    h1 {font-size:  48px;}
+    h2 {font-size:  36px;}
+    h3 {font-size:  28px;}
+    h4 {font-size:  18px;}
+}
+
+    
