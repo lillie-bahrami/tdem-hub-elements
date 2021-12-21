@@ -1,18 +1,45 @@
+/* ---------------------
+    Groups (navs or header rows)
+    --------------------- */
+
 .group {
-    display:flex;
-    width: 100%;
-    flex-flow: row nowrap;
-    justify-content:space-around;
-    align-items: center;
-    gap: 2%;
-  }
+  display        : flex;
+  width          : 100%;
+  flex-flow      : row nowrap;
+  justify-content: space-around;
+  align-items    : center;
+  gap            : 2%;
+}
+
+.group.header-nav-full {
+  justify-content: center;
+}
 
 /* ----- Media queries based on Bootstrap breakpoints -----  */
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
   .group {
     flex-flow: column nowrap;
-    width: 100%;
+    width    : 100%;
+  }
+
+  .group.header-nav-responsive .nav-element {
+    padding: 0.5rem 0rem;
+  }
+
+  .header-nav-full {
+    display: none;
+  }
+
+  .header-nav-responsive {
+    display: contents;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) and larger */
+@media (min-width: 768px) {
+  .header-nav-responsive {
+    display: none;
   }
 }

@@ -1,73 +1,70 @@
+/* ---------------------
+    Icons in circles
+--------------------- */
 /*
     var(--element-color) contains the dominant color for the circle-icon element,
     and should be set in the inline CSS for the element with class "circle" applied
-*/ 
-    
+*/
+
 /* ----- Default styles -----  */
 
 .circle {
-    background-color: #ffffff; 
-    border-color: var(--element-color);
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 50%;
-    vertical-align: middle;
-    padding: 2%;
-    margin: 1rem;
+  background-color: #ffffff;
+  border-color    : var(--element-color);
+  border-width    : 5px;
+  border-style    : solid;
+  border-radius   : 50%;
+  vertical-align  : middle;
+  padding         : 2%;
+  margin          : 1rem;
 }
 
 .circle .icon {
-    fill: var(--dark-blue);
-    fill: var(--element-color);
-    width: 70%;
-    height: auto;
-    margin: 15% 0% 0% 15%;
+  fill  : var(--dark-blue);
+  fill  : var(--element-color);
+  width : 70%;
+  height: auto;
+  margin: 15% 0% 0% 15%;
 }
 
 /* ----- Sizes -----  */
 
 /* For use in header rows */
-.circle.large {
-    width: 15rem; height: 15rem;
-}
+.circle.large {width : 20rem; height: 20rem;}
 
 /* For use in DRC homepage nav */
-.circle.medium {
-    width: 10rem; height: 10rem;
-
-}
+.circle.medium {width : 15rem; height: 15rem;}
 
 /* For use in DRC header nav */
-.circle.small {
-    width: 5rem; height: 5rem;
-}
+.circle.small {width : 10rem; height: 10rem;}
 
 /* ----- Special cases -----  */
+a .circle:hover {
+  cursor: pointer;
+}
 
 /* "Active" represents current page in the nav */
-.circle.active, a .circle:hover {
-    background-color: var(--element-color);
+.circle.active,
+a .circle:hover {
+  background-color: var(--element-color);
 }
 
-.circle.active .icon, a .circle:hover .icon {
-    fill: #fff;
+.circle.active .icon,
+a .circle:hover .icon {
+  filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(311deg)
+    brightness(103%) contrast(100%);
 }
 
-.cls-1{fill:none;}      /*necessary for SVGs*/
+.cls-1 {fill: none;} /*necessary for SVGs*/
 
 /* ----- Media queries based on Bootstrap breakpoints -----  */
 
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    .circle.large {
-        width: 100px; height: 100px;
-    }
+@media (max-width: 575.98px) {
+  .circle.large {width : 15rem; height: 15rem;}
+}
 
-    .circle.medium {
-        width: 75px; height: 75px;
-    }
-
-    .circle.small {
-        width: 50px; height: 50px;
-    }
+/* Medium devices (tablets, less than 992px) and smaller */
+@media (max-width: 991.98px) {
+  .circle.medium {width : 10rem; height: 10rem;}
 }
