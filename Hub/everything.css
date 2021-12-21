@@ -235,7 +235,11 @@ Nav elements
     h2 {font-size:  32px;}
     h3 {font-size:  24px;}
     h4 {font-size:  18px;}
-    .circle.medium {width : 10rem; height: 10rem;}
+}
+
+/* Large devices (desktops, less than 1140px) */
+@media (max-width: 1139.98px) { 
+    .circle.medium {width : 7.5rem; height: 7.5rem;}
 }
 
 /* Medium devices (tablets, less than 992px) and larger */
@@ -252,5 +256,3 @@ Nav elements
     h3 {font-size:  28px;}
     h4 {font-size:  18px;}
 }
-
-    
