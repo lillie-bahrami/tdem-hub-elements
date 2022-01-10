@@ -1,91 +1,151 @@
 /* ---------------------
 Typography
 --------------------- */
-    
+
 /* Headings: Titillium Web */
 h1 {
-    color: #fff;
-    width: 300px;
+  color    : #fff;
+  font-size: 48px;
+  width    : 300px;
 }
 
 h2 {
-    color: var(--dark-blue);
+  color    : var(--dark-blue);
+  font-size: 36px;
 }
 
 h3 {
-    color: var(--dark-blue);
+  color    : var(--dark-blue);
+  font-size: 28px;
 }
 
 h4 {
-    font-weight: bold;
-    color      : var(--dark-blue);
+  font-weight: bold;
+  color      : var(--dark-blue);
+  font-size  : 18px;
 }
 
 /* Body Text: Open Sans */
 p {
-    font-size: 16px;
-    color    : var(--gray);
+  font-size: 16px;
+  color    : var(--gray);
+}
+
+button {
+  padding: 1rem 2rem;
+  border : none;
+  cursor : pointer;
+}
+
+a {
+  outline: 0 !important;
+}
+
+a:focus {
+  outline: 0 !important;
+}
+
+a:hover {
+  outline: 0 !important;
 }
 
 /* ----- Special cases -----  */
 
 .nav-number {
-    font-weight: bold;
-    font-family: 'Titillium Web';
-    font-size  : 36px;
-    color      : var(--dark-blue);
+  font-weight    : bold;
+  font-family    : "Titillium Web";
+  font-size      : 36px;
+  color          : var(--dark-blue);
+  text-decoration: none;
 }
 
 .row-text {
-    text-align: left;
+  text-align: left;
+}
+
+/*for homepage header row with seal*/
+.row-text.special {
+  text-align : center;
+  flex-shrink: 3;
+  width      : auto;
 }
 
 .col-text {
-    text-align: center;
+  text-align: center;
 }
 
 .header-nav-full .nav-element .col-text {
-    font-size  : 12px;
-    font-weight: bold;
+  font-size  : 12px;
+  font-weight: bold;
 }
 
-/* ----- Media queries based on Bootstrap breakpoints -----  */
+/* ---------------------
+    Media queries based on Bootstrap breakpoints
+    --------------------- */
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    .row-text {
-    text-align: center;
-    }
+/* Medium devices and smaller (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /*--- Typography ---*/
 
-    .col-text {
-    width: 150px;
-    }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+
+  .header-nav-responsive .nav-element .col-text {
+    text-align: left;
+    width     : 20rem;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-    .col-text {
-        text-align: left;
-        width     : 300px;
-    }
-    h1 {font-size:  32px;}
-    h2 {font-size:  26px;}
-    h3 {font-size:  22px;}
-    h4 {font-size:  18px;}
+/*not an official bootstrap breakpoint*/
+@media (max-width: 820px) {
+  /*--- Typography - col-text and row-text breakpoint ---*/
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+
+  .col-text {
+    text-align: left;
+    width     : 20rem;
+  }
+
+  .row-text {
+    text-align: center;
+  }
+
+  .home-nav-responsive a {
+    width          : 100%;
+    text-decoration: none !important;
+  }
+
+  a p {
+    text-decoration: underline;
+  }
 }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-    h1 {font-size:  40px;}
-    h2 {font-size:  32px;}
-    h3 {font-size:  24px;}
-    h4 {font-size:  18px;}
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /*--- Typography ---*/
+  .col-text {
+    width: 10rem;
+  }
 }
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    h1 {font-size:  48px;}
-    h2 {font-size:  36px;}
-    h3 {font-size:  28px;}
-    h4 {font-size:  18px;}
-    }

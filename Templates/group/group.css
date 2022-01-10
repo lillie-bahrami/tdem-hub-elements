@@ -11,35 +11,63 @@
   gap            : 2%;
 }
 
+.header-row {
+  justify-content: center;
+}
+
 .group.header-nav-full {
   justify-content: center;
 }
 
-/* ----- Media queries based on Bootstrap breakpoints -----  */
+.home-nav-responsive {
+  display: none;
+}
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-  .group {
-    flex-flow: column nowrap;
-    width    : 100%;
-  }
+.header-nav-responsive {
+  display: none;
+}
 
-  .group.header-nav-responsive .nav-element {
-    padding: 0.5rem 0rem;
-  }
+/* ---------------------
+    Media queries based on Bootstrap breakpoints
+    --------------------- */
+
+/* Medium devices and smaller (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /*--- Groups and navs: header-navs breakpoint ---*/
 
   .header-nav-full {
     display: none;
   }
 
   .header-nav-responsive {
-    display: contents;
+    display: contents;  /*Not a flex container*/
+  }
+
+  .header-nav-responsive a {
+    width: 100%;
+  }
+
+  .header-nav-responsive .group {
+    flex-flow: column nowrap;
+    width    : 100%;
   }
 }
 
-/* Medium devices (tablets, less than 992px) and larger */
-@media (min-width: 768px) {
-  .header-nav-responsive {
+/* Small devices (landscape phones, less than 768px) */
+/*not an official bootstrap breakpoint*/
+@media (max-width: 820px) {
+  /*--- Groups and navs: Header-row, homepage nav breakpoint ---*/
+
+  .group {
+    flex-flow: column nowrap;
+    width    : 100%;
+  }
+
+  .home-nav-responsive {
+    display: flex;
+  }
+
+  .home-nav-full {
     display: none;
   }
 }
