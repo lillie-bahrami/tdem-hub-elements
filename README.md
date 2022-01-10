@@ -22,14 +22,14 @@ This contains samples of the final code used in the site, with formatting and li
 
 ![Screenshot of site](./Screenshots/readme-4.png) ![Screenshot of site](./Screenshots/readme-5.png) 
 
-* **`everything.css`** compiles all of the CSS used for custom elements into a convenient file, which has been included in the HTML of each header row in the DRC. **Note: this code contains styling for all of the text displayed on the page.**
+* **`everything.css`** compiles all of the CSS used for custom elements into a convenient file, which has been included in the HTML of each header row in the DRC. **Note: this code contains styling for all of the text displayed on the page.** **Additional note: this file references the font Titillium Web, which is currently used in titles.**
 
 ### Templates 
 
 This contains template code for all DRC custom elements, ready to be filled in with specific links, colors, and icons.
 
 * `colors.css` includes custom variables for each color used in the DRC branding.
-* `typography.css` styles different heading levels, buttons, and links.
+* `typography.css` styles different heading levels, buttons, and links. **Note: this file references the font Titillium Web, which is currently used in titles.**
 * `circle-icon` contains examples for all styles of icons framed in circles on the site. 
 
 <img src="./Screenshots/readme-6.png" alt="Screenshot of site" width="200px" height="auto">
@@ -46,6 +46,7 @@ Each of these files contains the HTML code to create a specific SVG icon. To inc
 * Copy that link!
 
 The files ending in "-small" should be used in the header nav, whereas the others should be used in header rows and the homepage nav.
+
 <img src="./Screenshots/readme-9.png" alt="Screenshot of site" width="200px" height="auto"> <img src="./Screenshots/readme-10.png" alt="Screenshot of site" width="200px" height="auto">
 
 
