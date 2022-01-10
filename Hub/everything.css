@@ -196,6 +196,10 @@ Sub components of navs or header rows
   gap           : 0.5rem;
 }
 
+.button-stack-element button {
+  width: 16rem;
+}
+
 /* ---------------------
     Groups (navs or header rows)
     --------------------- */

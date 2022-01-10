@@ -21,6 +21,10 @@ Sub components of navs or header rows
   gap           : 0.5rem;
 }
 
+.button-stack-element button {
+  width: 16rem;
+}
+
 /* ---------------------
     Media queries based on Bootstrap breakpoints
     --------------------- */
